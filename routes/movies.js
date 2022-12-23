@@ -5,9 +5,9 @@ const Movie = require('../models/Movies')
 const bodyParser = require("body-parser");
 const multer = require("multer");
 const path=require("path")
-app.use((express.static(path.join(__dirname,"../../frontend/public/images"))))
+app.use((express.static(path.join(__dirname,"../client/build/images"))))
 
-const imagefolder=path.join(__dirname,"../../frontend/public/images")
+const imagefolder=path.join(__dirname,"../client/build/images")
 console.log(imagefolder)
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {

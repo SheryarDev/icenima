@@ -1,6 +1,7 @@
 const connectToMonog = require("./db")
 const express = require('express')
 const bodyParser = require("body-parser");
+const path=require("path")
 connectToMonog();
 const app = express()
 const port = process.env.PORT || 5000
@@ -8,7 +9,7 @@ const port = process.env.PORT || 5000
 
 
 
-
+  
 //in order to use req.body we have to use this middleware
 app.use(express.json())
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -17,7 +18,7 @@ app.use(bodyParser.json());
  //Available Routes
 app.use('/api/users',require('./routes/auth'))
  app.use('/api/movies',require('./routes/movies'))
-   app.use('/api/genres',require('./routes/genre'))
+
 
     
 //static files
