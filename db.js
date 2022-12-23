@@ -8,7 +8,7 @@ require('dotenv').config()
 const MONGO_URL=process.env.DATABASE
  async function connectToMonog(){
 
- await mongoose.connect("mongodb://0.0.0.0:27017/icenima", {
+ await mongoose.connect(MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
