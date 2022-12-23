@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
  //Available Routes
-app.use('/api/users',require('./routes/auth'))
+app.use('/api/users',require('./routes/Auth'))
  app.use('/api/movies',require('./routes/movies'))
 
 
